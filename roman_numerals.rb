@@ -7,10 +7,10 @@ class RomanNumerals
   def retornarValor(romanos)
 
     romanos.reverse.split("").each do |c|
-      if c == "I" and (@valor_anterior == "V" or @valor_anterior == "X")
-
+      if c == "I" and (@valor_anterior == "V" or @valor_anterior == "X" or @valor_anterior == "L")
         @valor = @valor - 1
-        
+      elsif c == "X" and (@valor_anterior == "L")        
+        @valor = @valor - 10
       else
 
         if c == "I"
@@ -23,6 +23,10 @@ class RomanNumerals
 
         if c == "X"
           @valor = @valor + 10
+        end
+
+        if c == "L"
+          @valor = @valor + 50
         end
 
       end
