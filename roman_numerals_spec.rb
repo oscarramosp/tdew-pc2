@@ -28,4 +28,24 @@ describe RomanNumerals  do
     roman.retornarValor("XIII").should == 13
   end
 
+  it "Si le envio 'IV', debe retornar 4" do
+    roman = RomanNumerals.new()
+    roman.retornarValor("IV").should == 4
+  end
+
+  it "Si le envio 'IX', debe retornar 9" do
+    roman = RomanNumerals.new()
+    roman.retornarValor("IX").should == 9
+  end
+
+  it "Si le envio 'XIV', debe retornar 14" do
+    roman = RomanNumerals.new()
+    roman.retornarValor("XIV").should == 14
+  end
+
+  it "Si le envio 'IXX', debe retornar 19" do
+    roman = RomanNumerals.new()
+    roman.retornarValor("IXX").should == 19
+  end
+
 end
