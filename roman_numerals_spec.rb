@@ -23,4 +23,9 @@ describe RomanNumerals  do
     roman.retornarValor("VI").should == 6
   end
 
+  it "Si le envio 'XIII', debe retornar 13" do
+    roman = RomanNumerals.new()
+    roman.retornarValor("XIII").should == 13
+  end
+
 end
