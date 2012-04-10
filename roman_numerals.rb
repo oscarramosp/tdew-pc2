@@ -1,14 +1,20 @@
 class RomanNumerals
 
+    def initialize()
+        @valor = 0
+    end
+  
   def retornarValor(romanos)
-    if romanos == "I"
-      @valor = 1
+
+    romanos.split("").each do |c|
+      if c = "I"
+        @valor = @valor + 1
+      end
+
     end
 
-    if romanos == "II"
-      @valor = 2 
-    end
     return @valor
+
   end
 
 end
